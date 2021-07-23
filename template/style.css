@@ -1,3 +1,11 @@
+:root {
+  --color-primary-1: #57837b; /* for header, footer nav etc */
+  --color-primary-2: #f1ecc3; /* for body */
+  --color-primary-3: #c9d8b6; /* for text in color primary 1 */
+  --color-primary-4: #515e63; /* for body text */
+  --color-hover-header: #a8c08a; /* color for hovered text items in the header */
+}
+
 *,
 *::before,
 *::after {
@@ -18,3 +26,71 @@ body {
 }
 
 /* Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 1fr 6rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--color-primary-1);
+}
+
+main {
+  grid-area: main;
+  background-color: var(--color-primary-2);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--color-primary-1);
+  color: var(--color-primary-3);
+}
+
+/* Common components */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+/* Header */
+
+.header-link {
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.header-link:link,
+.header-link:visited {
+  color: var(--color-primary-3);
+}
+
+.header-link:hover,
+.header-link:active {
+  color: var(--color-hover-header);
+}
+
+.logo-link {
+  font-family: "Righteous", cursive;
+  font-size: 3rem;
+}
