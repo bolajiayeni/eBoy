@@ -1,9 +1,9 @@
 :root {
-  --color-primary-1: #57837b; /* for header, footer nav etc */
-  --color-primary-2: #f1ecc3; /* for body */
-  --color-primary-3: #c9d8b6; /* for text in color primary 1 */
-  --color-primary-4: #515e63; /* for body text */
-  --color-hover-header: #a8c08a; /* color for hovered text items in the header */
+  --color-primary-1: #efefef; /* for header, body, footer nav etc */
+  --color-primary-2: #caebf2; /* for border and outline and selection */
+  --color-primary-3: #a9a9a9; /* for text in color primary 1 */
+  --color-primary-4: #355c7d; /* for bolder text */
+  --color-hover-header: #ff3b3f; /* color for hovered text items in the header */
 }
 
 *,
@@ -45,7 +45,7 @@ header {
 
 main {
   grid-area: main;
-  background-color: var(--color-primary-2);
+  background-color: var(--color-primary-1);
 }
 
 footer {
