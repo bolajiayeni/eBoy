@@ -111,8 +111,8 @@ a:visited {
   padding: 0.4rem;
   transition: all 0.2s;
   margin: 1rem;
-  max-width: 30rem;
-  max-height: 55rem;
+  max-width: 32rem;
+  max-height: 59rem;
 }
 
 .product-card:hover {
@@ -128,7 +128,8 @@ a:visited {
 }
 
 .product-img {
-  max-width: 28rem;
+  max-width: 30rem;
+  max-height: 46rem;
   width: 100%;
   min-height: 37.5rem;
 }
