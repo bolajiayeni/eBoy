@@ -1,0 +1,166 @@
+:root {
+  --color-primary-1: #efefef; /* for header, body, footer nav etc */
+  --color-primary-2: #caebf2; /* for border and outline and selection */
+  --color-primary-3: #a9a9a9; /* for text in color primary 1 */
+  --color-primary-4: #355c7d; /* for bolder text */
+  --color-active-1: #ff3b3f; /* color for hovered text items in the header */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 16px * 62.5% = 10 px = 1rem */
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-primary-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Layout */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 1fr 6rem;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background-color: var(--color-primary-1);
+  margin-bottom: 1rem;
+}
+
+main {
+  grid-area: main;
+  background-color: var(--color-primary-1);
+}
+
+footer {
+  grid-area: footer;
+  background-color: var(--color-primary-1);
+  color: var(--color-primary-3);
+}
+
+/* Common components */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+}
+
+/* Header */
+
+.header-link {
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.header-link:link,
+.header-link:visited {
+  color: var(--color-primary-3);
+}
+
+.header-link:hover,
+.header-link:active {
+  color: var(--color-active-1);
+}
+
+.logo-link {
+  font-family: "Righteous", cursive;
+  font-size: 3rem;
+}
+
+/* Product card */
+
+.product-card {
+  border: 0.3rem dashed var(--color-primary-2);
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  transition: all 0.2s;
+  margin: 1rem;
+  max-width: 30rem;
+  max-height: 53rem;
+}
+
+.product-card:hover {
+  border: 0.3rem solid var(--color-active-1);
+}
+
+.product-card-body {
+  padding: 1rem;
+}
+
+.product-card-body > * {
+  margin-bottom: 0.3rem;
+}
+
+.product-img {
+  max-width: 28rem;
+  width: 100%;
+  min-height: 37.5rem;
+}
+
+.product-card-title {
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+}
+
+.product-link:link,
+.product-link:visited {
+  color: var(--color-primary-3);
+  transition: all 0.2s;
+}
+
+.product-link:hover,
+.product-link:active {
+  color: var(--color-active-1);
+}
+
+.product-rating {
+  color: var(--color-active-1);
+}
+
+.product-rating > * {
+  margin: 0.1rem;
+}
+
+.product-price {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  color: var(--color-primary-4);
+  font-size: 2rem;
+}
