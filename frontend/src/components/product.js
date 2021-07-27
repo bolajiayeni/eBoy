@@ -1,4 +1,5 @@
 import React from "react";
+import Rating from "./Rating";
 
 export default function Product(props) {
   const { product } = props;
@@ -14,13 +15,10 @@ export default function Product(props) {
           <h3 className="product-card-title">{product.name}</h3>
         </a>
 
-        <div className="product-rating">
-          <span className="material-icons">star_rate</span>
-          <span className="material-icons">star_rate</span>
-          <span className="material-icons">star_rate</span>
-          <span className="material-icons">star_rate</span>
-          <span className="material-icons">star_rate</span>
-        </div>
+        <Rating
+          rating={product.rating}
+          numOfReviews={product.numOfReview}
+        ></Rating>
 
         <div className="product-price">${product.price}</div>
       </div>
