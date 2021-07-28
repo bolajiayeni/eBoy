@@ -3,7 +3,7 @@ const data = {
     {
       _id: 1,
       name: "Amazon Echo",
-      category: "Electronic Devices",
+      category: "electronic-devices",
       image: "/image/amazon-echo-1.jpg",
       price: 60,
       brand: "Amazon",
@@ -15,7 +15,7 @@ const data = {
     {
       _id: 2,
       name: "Sony Headphones",
-      category: "Electronic Devices",
+      category: "electronic-devices",
       image: "/image/sony-headphones-1.jpg",
       price: 40,
       brand: "Sony",
@@ -27,7 +27,7 @@ const data = {
     {
       _id: 3,
       name: "White Fashion sneakers",
-      category: "Shoes",
+      category: "shoes",
       image: "/image/white-sneakers-1.jpg",
       price: 25,
       brand: "Fashion",
@@ -39,7 +39,7 @@ const data = {
     {
       _id: 4,
       name: "Blue Stilettos",
-      category: "Shoes",
+      category: "shoes",
       image: "/image/blue-lady-shoes-1.jpg",
       price: 150,
       brand: "Versace",
@@ -51,7 +51,7 @@ const data = {
     {
       _id: 5,
       name: "Green Suede Brogues",
-      category: "Shoes",
+      category: "shoes",
       image: "/image/green-brogues-1.jpg",
       price: 133,
       brand: "Oxford's",
@@ -63,7 +63,7 @@ const data = {
     {
       _id: 6,
       name: "Rayban Aviator Sunglasses",
-      category: "Sunglasses",
+      category: "sunglasses",
       image: "/image/rayban-sunglasses-1.jpg",
       price: 180,
       brand: "Rayban",
@@ -75,7 +75,7 @@ const data = {
     {
       _id: 7,
       name: "Red Old Skool Vans",
-      category: "Shoes",
+      category: "shoes",
       image: "/image/red-vans-1.jpg",
       price: 50,
       brand: "Vans",
@@ -87,7 +87,7 @@ const data = {
     {
       _id: 8,
       name: "White Puma Creepers",
-      category: "Shoes",
+      category: "shoes",
       image: "/image/white-puma-1.jpg",
       price: 65,
       brand: "Puma",
