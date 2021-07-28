@@ -1,11 +1,9 @@
 import React from "react";
-import data from "../../data";
+import data from "../data";
 
-export default function ProductScreen(props) {
-  const product = data.products.find((x) => x._id === props.match.params.id);
-
-  console.log(
-    "itsaa " + data.products[0]._id + " omo: " + props.match.params.id.type
+export default function ProductScreen({ match }) {
+  const product = data.products.find(
+    (x) => x._id.toString() === match.params.id
   );
 
   if (!product) {
