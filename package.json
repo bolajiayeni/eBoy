@@ -1,5 +1,6 @@
 {
   "name": "eboy",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/bolajiayeni/eBoy#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
   }
 }
