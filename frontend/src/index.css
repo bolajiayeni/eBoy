@@ -232,6 +232,30 @@ a:visited {
   background-color: var(--color-primary-1);
 }
 
+.available {
+  color: var(--color-primary-4);
+}
+
+.unavailable {
+  color: var(--color-active-1);
+}
+
+select {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  background-color: var(--color-primary-1);
+  background-image: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-primary-4);
+}
+
 /* Header */
 
 .header-link {
@@ -440,12 +464,28 @@ a:visited {
   margin-bottom: 4rem;
 }
 
-.available {
-  color: var(--color-primary-4);
+.product-page-select {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
 }
 
-.unavailable {
-  color: var(--color-active-1);
+.product-qty-label {
+  margin-right: 20rem;
+  font-size: 2rem;
+}
+
+.product-qty-selector-box {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 0.3rem dashed var(--color-primary-4);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.product-qty-selector-box:hover {
+  border: 0.3rem dashed var(--color-active-1);
 }
 
 /* test classes */
