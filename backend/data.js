@@ -2,6 +2,7 @@ const data = {
   products: [
     {
       _id: 1,
+      countInStock: 3,
       name: "Amazon Echo",
       category: "electronic-devices",
       image: "/image/amazon-echo-1.jpg",
@@ -14,6 +15,7 @@ const data = {
     },
     {
       _id: 2,
+      countInStock: 0,
       name: "Sony Headphones",
       category: "electronic-devices",
       image: "/image/sony-headphones-1.jpg",
@@ -26,6 +28,7 @@ const data = {
     },
     {
       _id: 3,
+      countInStock: 3,
       name: "White Fashion sneakers",
       category: "shoes",
       image: "/image/white-sneakers-1.jpg",
@@ -38,6 +41,7 @@ const data = {
     },
     {
       _id: 4,
+      countInStock: 3,
       name: "Blue Stilettos",
       category: "shoes",
       image: "/image/blue-lady-shoes-1.jpg",
@@ -50,6 +54,7 @@ const data = {
     },
     {
       _id: 5,
+      countInStock: 3,
       name: "Green Suede Brogues",
       category: "shoes",
       image: "/image/green-brogues-1.jpg",
@@ -62,6 +67,7 @@ const data = {
     },
     {
       _id: 6,
+      countInStock: 3,
       name: "Rayban Aviator Sunglasses",
       category: "sunglasses",
       image: "/image/rayban-sunglasses-1.jpg",
@@ -74,6 +80,7 @@ const data = {
     },
     {
       _id: 7,
+      countInStock: 3,
       name: "Red Old Skool Vans",
       category: "shoes",
       image: "/image/red-vans-1.jpg",
@@ -86,6 +93,7 @@ const data = {
     },
     {
       _id: 8,
+      countInStock: 3,
       name: "White Puma Creepers",
       category: "shoes",
       image: "/image/white-puma-1.jpg",
