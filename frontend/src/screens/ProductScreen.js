@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Rating from "../components/Rating";
@@ -9,6 +9,7 @@ import { detailsProducts } from "../actions/productActions";
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
+  const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, product, error } = productDetails;
 
@@ -16,6 +17,10 @@ export default function ProductScreen(props) {
   useEffect(() => {
     dispatch(detailsProducts(productId));
   }, [dispatch, productId]);
+
+  const addToCartHandler = () => {
+    props.history.push("/cart");
+  };
 
   return (
     <div>
@@ -48,17 +53,42 @@ export default function ProductScreen(props) {
                 rating={product.rating}
                 numOfReviews={product.numOfReview}
               ></Rating>
-              <input
-                type="button"
-                value="Add to cart"
-                className="product-buy-btn"
-              />
+
+              {product.countInStock > 0 && (
+                <>
+                  <div className="row">
+                    <div className="product-qty-label">Qty</div>
+                    <div className="product-qty-selector-box">
+                      <select
+                        value={qty}
+                        onChange={(e) => setQty(e.target.value)}
+                      >
+                        {[...Array(product.countInStock).keys()].map((x) => (
+                          <option key={x + 1} value={x + 1}>
+                            {x + 1}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <input
+                    type="button"
+                    value="Add to cart"
+                    onClick={addToCartHandler}
+                    className="product-buy-btn"
+                  />
+                </>
+              )}
+
               <div className="product-page-status">
                 <div className="">Status: </div>
                 <div
-                  className={product.price > 100 ? "available" : "unavailable"}
+                  className={
+                    product.countInStock > 0 ? "available" : "unavailable"
+                  }
                 >
-                  {product.price > 100 ? "available" : "unavailable"}
+                  {product.countInStock > 0 ? "available" : "unavailable"}
                 </div>
               </div>
             </div>
