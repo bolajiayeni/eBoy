@@ -488,6 +488,19 @@ select {
   border: 0.3rem dashed var(--color-active-1);
 }
 
+/* 
+Cart page
+*/
+.cart-badge {
+  background-color: var(--color-primary-1);
+  border: 0.3rem dashed var(--color-active-1);
+  color: var(--color-active-1);
+  border-radius: 50%;
+  padding: 0.2rem 0.6rem;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
 /* test classes */
 
 .red {
